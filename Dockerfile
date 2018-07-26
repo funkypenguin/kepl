@@ -41,4 +41,4 @@ COPY --from=builder /opt/kepl/build/src/miner .
 RUN mkdir -p /var/lib/kepl
 WORKDIR /var/lib/kepl
 ENTRYPOINT ["/usr/local/bin/kepld"]
-CMD ["--no-console","--data-dir","/var/lib/kepld","--rpc-bind-ip","0.0.0.0","--rpc-bind-port","8580","--p2p-bind-port","8581"]
+CMD ["--no-console","--data-dir","/var/lib/kepld","--rpc-bind-ip","0.0.0.0","--rpc-bind-port","8581","--p2p-bind-port","8580"]
