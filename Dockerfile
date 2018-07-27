@@ -1,5 +1,8 @@
 FROM debian:8 as builder
 
+ARG BRANCH=1.2.0
+ENV BRANCH=${TURTLECOIN_BRANCH}
+
 # install build dependencies
 # checkout the latest tag
 # build and install
@@ -16,7 +19,7 @@ RUN apt-get update && \
       libc6-dev \
       cmake \
       libboost-all-dev && \
-    git clone https://github.com/kepldev/kepl.git /opt/kepl && \
+    git clone --branch $BRANCH https://github.com/kepldev/kepl.git /opt/kepl && \
     cd /opt/kepl && \
     mkdir build && \
     cd build && \
