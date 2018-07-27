@@ -1,7 +1,7 @@
 FROM debian:8 as builder
 
 ARG BRANCH=1.2.0
-ENV BRANCH=${TURTLECOIN_BRANCH}
+ENV BRANCH=${BRANCH}
 
 # install build dependencies
 # checkout the latest tag
